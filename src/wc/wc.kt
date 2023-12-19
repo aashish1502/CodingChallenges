@@ -2,6 +2,19 @@ import java.io.File
 
 fun main(args: Array<String>) {
 
+    if(args[0] == "--help") {
+
+        println("Welcome to wc")
+        println("This is a tool to perform some basic analysis on a txt file")
+        println("To use it simply run it as kotlinc wc.kt <text-file> <flags>\n")
+        println("Flags\tUse")
+        println("-c\t\tReads the size of the file and prints it to the console")
+        println("-l\t\tPrints the number of lines in the given text file")
+        println("-w\t\tPrints the number of words present in the file")
+        println("-m\t\tPrints the number of characters in the file")
+        return
+    }
+
     if(args.isEmpty()) {
         println("wc: invalid number of arguments")
         println("use --help to learn more")
